@@ -30,7 +30,7 @@ static const int ZX_ITF_W2 = 2; // Pixel width of a 2x wide line
 static const int ZX_ITF_N = 1; // Pixel width of a narrow line
 
 /** Valid ITF lengths. Anything longer than the largest value is also allowed. */
-const int ZX_ITF_DEFAULT_ALLOWED_LENGTHS[] = { 6, 8, 10, 12, 14 };
+const int ZX_ITF_DEFAULT_ALLOWED_LENGTHS[] = { 2, 4, 6, 8, 10, 12, 14 };
 
 /**
  * Start/end guard pattern.
