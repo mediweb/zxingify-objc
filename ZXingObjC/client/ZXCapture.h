@@ -45,6 +45,7 @@
 @property (nonatomic, assign) CGAffineTransform transform;
 @property (nonatomic, assign) CGFloat captureFramesPerSec;
 @property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 
 - (int)back;
 - (int)front;

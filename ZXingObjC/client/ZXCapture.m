@@ -32,15 +32,12 @@
 @property (nonatomic, strong) dispatch_queue_t captureQueue;
 @property (nonatomic, assign) BOOL hardStop;
 @property (nonatomic, strong) AVCaptureDeviceInput *input;
-@property (nonatomic, strong) AVCaptureVideoPreviewLayer *layer;
 @property (nonatomic, strong) CALayer *luminanceLayer;
 @property (nonatomic, assign) int orderInSkip;
 @property (nonatomic, assign) int orderOutSkip;
 @property (nonatomic, assign) BOOL onScreen;
 @property (nonatomic, strong) AVCaptureVideoDataOutput *output;
 @property (nonatomic, assign) BOOL running;
-
-
 @property (nonatomic, assign) BOOL heuristic;
 @property (nonatomic, copy) dispatch_queue_t parallelQueue;
 @end
@@ -94,14 +91,14 @@
 #pragma mark - Property Getters
 
 - (CALayer *)layer {
-  AVCaptureVideoPreviewLayer *layer = (AVCaptureVideoPreviewLayer *)_layer;
-  if (!_layer) {
+  AVCaptureVideoPreviewLayer *layer = (AVCaptureVideoPreviewLayer *)_videoPreviewLayer;
+  if (!_videoPreviewLayer) {
     layer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
     layer.affineTransform = self.transform;
     layer.delegate = self;
     layer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     
-    _layer = layer;
+		_videoPreviewLayer = layer;
   }
   return layer;
 }
