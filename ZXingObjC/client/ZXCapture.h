@@ -44,6 +44,7 @@
 @property (nonatomic, assign) BOOL torch;
 @property (nonatomic, assign) CGAffineTransform transform;
 @property (nonatomic, assign) CGFloat captureFramesPerSec;
+@property (nonatomic, strong) AVCaptureSession *session;
 
 - (int)back;
 - (int)front;

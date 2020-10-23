@@ -39,7 +39,7 @@
 @property (nonatomic, assign) BOOL onScreen;
 @property (nonatomic, strong) AVCaptureVideoDataOutput *output;
 @property (nonatomic, assign) BOOL running;
-@property (nonatomic, strong) AVCaptureSession *session;
+
 
 @property (nonatomic, assign) BOOL heuristic;
 @property (nonatomic, copy) dispatch_queue_t parallelQueue;
